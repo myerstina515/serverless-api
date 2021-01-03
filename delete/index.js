@@ -1,5 +1,5 @@
 'use strict';
-const dogModel = require('./dogs.schema.js');
+const dogModel = require('./dog.schema');
 
 exports.handler = async (event) => {
   const id = event.pathParameters.id

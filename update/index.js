@@ -3,11 +3,11 @@ const dogModel = require('./dog.schema');
 
 exports.handler = async (event) => {
   // const { breed, color, age, sheds } = JSON.parse(event.body);
-  const id = event.pathParameters.id
+  const id = event.pathParameters.id;
   try {
     let data;
     if(id){
-      console.log('this is the event body', event.body)
+      console.log('this is the event body', event.body);
       const object = JSON.parse(event.body);
       data = await dogModel.update({id}, object);
   }
